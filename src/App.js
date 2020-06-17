@@ -1,19 +1,71 @@
 import React from 'react'
+import Navbar from './components/Navbar'
+import Jumbotron from './components/Jumbotron'
 import './App.css'
 
-let nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 const App = () => {
   return (
     <>
-      <h1 className="hotdog">Hello World!</h1>
-
-      <h3>Numbers:</h3>
-      <ul>
-        {
-          nums.map(num => <li>{num}</li>)
-        }
-      </ul>
+      <Navbar />
+      <Jumbotron />
+      <form>
+        <div className="form-row">
+          <div className="form-group col-md-6">
+            <label for="inputEmail4">Email</label>
+            <input type="email" className="form-control" id="inputEmail4" />
+          </div>
+          <div className="form-group col-md-6">
+            <label for="inputPassword4">Password</label>
+            <input type="password" className="form-control" id="inputPassword4" />
+          </div>
+        </div>
+        <div className="form-group">
+          <label for="inputAddress">Address</label>
+          <input type="text" className="form-control" id="inputAddress" placeholder="1234 Main St" />
+        </div>
+        <div className="form-group">
+          <label for="inputAddress2">Address 2</label>
+          <input type="text" className="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor" />
+        </div>
+        <div className="form-row">
+          <div className="form-group col-md-6">
+            <label for="inputCity">City</label>
+            <input type="text" className="form-control" id="inputCity" />
+          </div>
+          <div className="form-group col-md-4">
+            <label for="inputState">State</label>
+            <select id="inputState" className="form-control">
+              <option selected>Choose...</option>
+              <option>...</option>
+            </select>
+          </div>
+          <div className="form-group col-md-2">
+            <label for="inputZip">Zip</label>
+            <input type="text" className="form-control" id="inputZip" />
+          </div>
+        </div>
+        <div className="form-group">
+          <div className="form-check">
+            <input className="form-check-input" type="checkbox" id="gridCheck" />
+            <label className="form-check-label" for="gridCheck">
+              Check me out
+      </label>
+          </div>
+        </div>
+        <button type="submit" className="btn btn-primary">Sign in</button>
+      </form>
+      <div className="list-group">
+        <a href="google.com" className="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
+        <a href="google.com" className="list-group-item list-group-item-action list-group-item-primary">A simple primary list group item</a>
+        <a href="google.com" className="list-group-item list-group-item-action list-group-item-secondary">A simple secondary list group item</a>
+        <a href="google.com" className="list-group-item list-group-item-action list-group-item-success">A simple success list group item</a>
+        <a href="google.com" className="list-group-item list-group-item-action list-group-item-danger">A simple danger list group item</a>
+        <a href="google.com" className="list-group-item list-group-item-action list-group-item-warning">A simple warning list group item</a>
+        <a href="google.com" className="list-group-item list-group-item-action list-group-item-info">A simple info list group item</a>
+        <a href="google.com" className="list-group-item list-group-item-action list-group-item-light">A simple light list group item</a>
+        <a href="google.com" className="list-group-item list-group-item-action list-group-item-dark">A simple dark list group item</a>
+      </div>
     </>
   )
 }
