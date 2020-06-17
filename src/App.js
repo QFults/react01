@@ -10,7 +10,10 @@ import './App.css'
 const App = () => {
   return (
     <>
-      <Button text="Props Button" />
+      <Button 
+        text="Props Button" 
+        one="something" 
+        two="something"/>
       <Button text="Second Button" />
       <Button text="Third Button" />
       <Navbar />
